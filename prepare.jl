@@ -2,15 +2,12 @@ using Pkg
 using SQLite
 using ZipFile
 
-inputFile = ARGS[1]
-outputFile = ARGS[2]
+namesZipFile = ARGS[1]
+dbFile = ARGS[2]
 
-zipReader = ZipFile.Reader(inputFile)
+zipReader = ZipFile.Reader(namesZipFile)
 println(zipReader)
 
-db = SQLite.DB()
-DBInterface.execute(db,"CREATE TABLE names (name TEXT);")
+db = SQLite.DB(dbFile)
 
-DBInterface.execute(db, "INSERT INTO names VALUES ('BOB');")
-
-DBInterface.execute(db, "SELECT name FROM names;")
+SQLite.execute(db, "SELECT name FROM names;")
