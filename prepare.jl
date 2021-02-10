@@ -20,7 +20,6 @@ DBInterface.execute(db,
 
 stmt = SQLite._Stmt(db, "INSERT INTO names VALUES(?, ?, ?, ?)")
 
-
 zipReader = ZipFile.Reader(namesZipFile)
 
 for file in zipReader.files
