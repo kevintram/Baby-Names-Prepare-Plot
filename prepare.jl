@@ -37,7 +37,6 @@ for file in zipReader.files
                 DBInterface.execute(stmt, (year, row.name, row.sex, row.num))
             end
         end
-
     end
 end
 
