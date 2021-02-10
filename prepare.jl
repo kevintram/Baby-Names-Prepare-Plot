@@ -4,8 +4,6 @@ using DataFrames
 using ZipFile
 using CSV
 
-
-
 namesZipFile = ARGS[1]
 dbFile = ARGS[2]
 
