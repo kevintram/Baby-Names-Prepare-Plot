@@ -1,10 +1,4 @@
 using Pkg
-
-Pkg.add("SQLite")
-Pkg.add("DataFrames")
-Pkg.add("ZipFile")
-Pkg.add("CSV")
-
 using SQLite
 using DataFrames
 using ZipFile
